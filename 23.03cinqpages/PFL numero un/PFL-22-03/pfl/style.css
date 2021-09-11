@@ -1,3 +1,25 @@
+@font-face {
+  font-family: "azonix";
+  src: url("/fonts/azonix/Azonix.otf") format("woff2");
+}
+
+@font-face {
+  font-family: "dejaVuSans";
+  src: url("/fonts/be-vietnam/BeVietnam-Light.ttf") format("woff2");
+}
+
+@font-face {
+  font-family: "dolceVita";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "galder";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+}
+
 html,
 body {
   margin: 0;
@@ -33,8 +55,6 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-
-  font-family: "Open Sans", sans-serif;
 }
 
 #container {
@@ -54,7 +74,6 @@ body {
 }
 
 header {
-  width: 100%;
   height: 100vh;
   background: url(./images/guardcrop10.png) no-repeat 50% 50%;
   background-size: cover;
@@ -83,17 +102,19 @@ nav {
   position: fixed;
   width: 100%;
   line-height: 60px;
-  height: 100px;
+
   z-index: 1 !important;
   background: rgba(136, 190, 252, 0.5); /*  70% opaque green */
   /* Keyword value */
+
+  font-family: "azonix", sans-serif;
 }
 
 nav ul {
   line-height: 60px;
   list-style: none;
   /*  70% opaque green */
-  height: 100px;
+
   overflow: hidden;
   color: #fff;
   padding: 0;
@@ -106,7 +127,6 @@ nav ul {
 nav.black ul {
   /* background: rgba(104, 229, 252, 0.5);  70% opaque green */
   background: rgba(66, 152, 250, 0.5);
-  height: 100px;
 }
 
 nav ul li {
@@ -132,10 +152,6 @@ nav ul li a {
   display: none;
 }
 
-.menu .showing {
-  /* background: rgba(104, 229, 252, 0.5); */
-  background: #f1432c;
-}
 @media (max-width: 786px) {
   .logo {
     position: fixed;
@@ -144,13 +160,12 @@ nav ul li a {
   }
 
   nav ul {
-    height: 100px;
-    background: #c2e0f9;
+    max-height: 0px;
+    background: #000;
   }
 
   nav.black ul {
-    height: 100px;
-    background: #c2e0f9;
+    background: #000;
   }
 
   .showing {
@@ -158,7 +173,6 @@ nav ul li a {
   }
 
   nav ul li {
-    color: #026070;
     box-sizing: border-box;
     width: 100%;
     padding: 24px;
@@ -166,8 +180,6 @@ nav ul li a {
   }
 
   .menu-icon {
-    color: #44ea76;
-    background-color: #f3abd4;
     display: block;
   }
 }
@@ -860,6 +872,7 @@ p + p {
   font-size: 20px;
   font-weight: 200;
   text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+  font-family: "azonix", sans-serif;
 }
 
 /*stemoignage debut*/
@@ -894,8 +907,8 @@ p + p {
   width: 120px;
   border-radius: 50%;
   border: 5px solid white;
-  background: no-repeat center/cover
-    url(https://images.unsplash.com/photo-1563715992566-7ad5cf5b71d3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  margin-top: 10px;
+  background: no-repeat center/cover url(/images/testimony.png);
   position: absolute;
   top: 0%;
   left: 50%;
@@ -905,7 +918,7 @@ p + p {
 }
 
 .footer {
-  background: linear-gradient(90deg, #cde3f2 0%, #f3abd4 100%);
+  background: linear-gradient(90deg, #cde3f2 0%, #225390 100%);
   height: 140px;
   border-radius: 0 0 10px 10px;
   position: relative;
@@ -945,6 +958,7 @@ p + p {
   font-size: 44px;
   text-transform: uppercase;
   color: #424242;
+  font-family: "azonix", sans-serif;
 }
 
 .gallery-wrap {
@@ -1013,21 +1027,24 @@ p + p {
 /*coundotn dbt*/
 
 .time {
-  background: #323544;
+  background: #03123b;
   border-radius: 20px;
 }
 .time h1 {
   padding: 40px 0px 26px 0px;
-  font-size: 100px;
-  color: #627482;
+  font-size: 50px;
+  color: rgb(171 207 251);
+  font-family: azonix;
 }
 .mini {
-  background: #2d303d;
-  font-size: 25px;
+  background: #01092b;
+  font-size: 35px;
   padding: 8px 0;
   border-radius: 0px 0px 10px 10px;
-  color: white;
+  color: rgb(171 207 251);
   padding: 2.2em;
+  font-family: dejaVuSans;
+  font-weight: bolder;
 }
 
 /*countdown fin*/
@@ -1036,34 +1053,81 @@ p + p {
 /* bg shortcodes */
 .bg-gradient1 span,
 .bg-gradient1:before {
-  background: #52a0fd;
-  background: -moz-linear-gradient(left, #52a0fd 0%, #00e2fa 80%, #00e2fa 100%);
-  background: -webkit-linear-gradient(
-    left,
-    #52a0fd 0%,
-    #00e2fa 80%,
-    #00e2fa 100%
+  color: rgba(37, 124, 163, 1);
+  background: rgba(37, 124, 163, 1);
+  background: -moz-linear-gradient
+    (
+      right,
+      rgba(37, 124, 163, 1) 0%,
+      rgba(211, 244, 251, 1) 35%,
+      rgba(211, 244, 251, 1) 100%
+    );
+
+  background: -webkit-linear-gradient
+    (
+      right,
+      rgba(37, 124, 163, 1) 0%,
+      rgba(211, 244, 251, 1) 35%,
+      rgba(211, 244, 251, 1) 100%
+    );
+  background: linear-gradient(
+    to left,
+    rgba(37, 124, 163, 1) 0%,
+    rgba(211, 244, 251, 1) 35%,
+    rgba(211, 244, 251, 1) 100%
   );
-  background: linear-gradient(to right, #52a0fd 0%, #00e2fa 80%, #00e2fa 100%);
 }
+/* Mixins */
+/* bg shortcodes */
 .bg-gradient2 span,
 .bg-gradient2:before {
-  background: #44ea76;
-  background: -moz-linear-gradient(left, #44ea76 0%, #39fad7 80%, #39fad7 100%);
-  background: -webkit-linear-gradient(
-    left,
-    #3bf8ff 0%,
-    #39fad7 80%,
-    #39fad7 100%
+  color: rgba(37, 124, 163, 1);
+  background: rgba(37, 124, 163, 1);
+  background: -moz-linear-gradient
+    (
+      left,
+      rgba(37, 124, 163, 1) 0%,
+      rgba(211, 244, 251, 1) 35%,
+      rgba(211, 244, 251, 1) 100%
+    );
+
+  background: -webkit-linear-gradient
+    (
+      left,
+      rgba(37, 124, 163, 1) 0%,
+      rgba(211, 244, 251, 1) 35%,
+      rgba(211, 244, 251, 1) 100%
+    );
+  background: linear-gradient(
+    to right,
+    rgba(37, 124, 163, 1) 0%,
+    rgba(211, 244, 251, 1) 35%,
+    rgba(211, 244, 251, 1) 100%
   );
-  background: linear-gradient(to right, #32e7ff 0%, #39fad7 80%, #39fad7 100%);
 }
 .bg-gradient3 span,
 .bg-gradient3:before {
+  color: rgba(37, 124, 163, 1);
+  background: rgba(37, 124, 163, 1);
+  background: -moz-linear-gradient
+    (
+      right,
+      rgba(37, 124, 163, 1) 0%,
+      rgba(211, 244, 251, 1) 35%,
+      rgba(211, 244, 251, 1) 100%
+    );
+
+  background: -webkit-linear-gradient
+    (
+      right,
+      rgba(37, 124, 163, 1) 0%,
+      rgba(211, 244, 251, 1) 35%,
+      rgba(211, 244, 251, 1) 100%
+    );
   background: linear-gradient(
-    90deg,
-    rgba(2, 254, 255, 1) 0%,
-    rgba(127, 241, 240, 1) 35%,
+    to left,
+    rgba(37, 124, 163, 1) 0%,
+    rgba(211, 244, 251, 1) 35%,
     rgba(211, 244, 251, 1) 100%
   );
 }
@@ -1086,11 +1150,11 @@ a:active {
 .fancy-button {
   display: inline-block;
   margin: 30px;
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-family: "azonix";
   font-size: 17px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #fff;
+  color: #203c61;
   position: relative;
 }
 .fancy-button:before {
@@ -1223,3 +1287,36 @@ a:active {
 }
 
 /* Credit to https://epicbootstrap.com/snippets/footer-basic */
+
+.title.h1 {
+  font-family: "azonix", sans-serif;
+  color: rgb(3, 18, 59);
+}
+
+.titleContact {
+  font-family: "azonix";
+  color: rgb(3, 18, 59);
+}
+
+.card-title {
+  font-family: "azonix";
+  color: rgb(3, 18, 59);
+}
+
+.fancy-button {
+  font-family: "azonix";
+  color: rgb(3, 18, 59);
+}
+
+.h1.text-center.titleContact {
+  font-family: "azonix";
+  color: rgb(3, 18, 59);
+}
+.contact100-form-btn {
+  font-family: "azonix";
+  color: rgb(3, 18, 59);
+}
+p {
+  font-family: "dejaVuSans";
+  color: rgb(3, 18, 59);
+}
