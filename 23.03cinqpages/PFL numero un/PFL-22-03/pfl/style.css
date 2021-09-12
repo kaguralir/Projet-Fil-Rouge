@@ -976,6 +976,7 @@ p + p {
   flex: 0.5;
 
   background-size: cover;
+  height: 100vh;
   transition: flex 2.2s ease;
   backface-visibility: hidden;
   transform: perspective(1px) translateZ(0);
@@ -1339,4 +1340,22 @@ p {
   color: rgb(3, 18, 59);
 }
 
+.date {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  color: #203c61;
+}
 /* new accordion*/
+.email {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.email-contact {
+  font-size: 25px;
+  font-weight: bold;
+  color: #203c61;
+}
