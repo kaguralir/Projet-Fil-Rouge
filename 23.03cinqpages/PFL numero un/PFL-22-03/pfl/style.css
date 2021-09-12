@@ -61,7 +61,7 @@ body {
   overflow-y: scroll;
 }
 
-.section {
+#div8 {
   background: rgb(238, 174, 202);
   background: radial-gradient(
     circle,
@@ -186,7 +186,7 @@ nav ul li a {
 
 /*card*/
 
-#section4 {
+#div4 {
   height: auto;
   max-width: 100%;
   object-fit: contain;
@@ -240,7 +240,7 @@ nav ul li a {
   background-color: #404040;
 }
 .carousel-indicators .active {
-  background-color: rgb(254, 255, 255);
+  background-color: rgb(74, 194, 250);
   max-width: 12px;
   margin: 0 3px;
   height: 12px;
@@ -710,7 +710,7 @@ textarea.input100 {
   border-radius: 50%;
 }
 
-.section4 {
+.div4 {
   margin-bottom: 10em;
 }
 
@@ -961,6 +961,10 @@ p + p {
   font-family: "azonix", sans-serif;
 }
 
+.jaja img {
+  width: 100%;
+}
+
 .gallery-wrap {
   display: flex;
   flex-direction: row;
@@ -969,48 +973,62 @@ p + p {
 }
 
 .item {
-  flex: 1;
-  width: 100%;
-  background-position: center;
+  flex: 0.5;
+
   background-size: cover;
-  background-repeat: none;
   transition: flex 2.2s ease;
+  backface-visibility: hidden;
+  transform: perspective(1px) translateZ(0);
+  /* background-size: contain;
+  background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center;
 }
 @media (max-width: 750px) {
-  .second {
+  .gallery-wrap {
     display: flex;
     flex-direction: column;
     width: 100%;
+  }
+
+  .item-1a {
+    background-image: url("./images/3x/verticate.png");
+  }
+
+  .item-2a {
+    background-image: url("./images/3x/vertiques1.png");
+  }
+
+  .item-3a {
+    background-image: url("./images/3x/verti2.png");
+  }
+
+  .item-4a {
+    background-image: url("./images/fllexemplesverti.png");
   }
 }
 .item:hover,
 .item:active {
   flex: 9;
 }
-.item-1 {
-  background-image: url("./images/canva1.png");
-  background-position: bottom;
-}
 
-.item-2 {
-  background-image: url("./images/canva2.png");
-  background-position: center;
-}
+@media (min-width: 750px) {
+  .item-1 {
+    background-image: url("./images/3x/horicate.png");
+  }
 
-.item-3 {
-  background-image: url("./images/canva3.png");
-  background-position: top;
-}
+  .item-2 {
+    background-image: url("./images/3x/horiques.png");
+  }
 
-.item-4 {
-  background-image: url("./images/canva4.png");
-}
+  .item-3 {
+    background-image: url("./images/3x/horisource.png");
+  }
 
-.item-5 {
-  background-image: url("./images/canva5.png");
-  background-position: bottom;
+  .item-4 {
+    background-image: url("./images/fullexemples.png");
+  }
 }
-
 .social {
   position: absolute;
   right: 35px;
@@ -1320,3 +1338,5 @@ p {
   font-family: "dejaVuSans";
   color: rgb(3, 18, 59);
 }
+
+/* new accordion*/
