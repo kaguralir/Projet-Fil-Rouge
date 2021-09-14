@@ -186,6 +186,12 @@ nav ul li a {
     line-height: 70px;
     background: rgba(66, 152, 250, 0.5);
   }
+
+  header {
+    height: 120vh;
+    background: url(./images/mobileview.PNG) no-repeat 50% 50%;
+    background-size: cover;
+  }
 }
 
 /*card*/
