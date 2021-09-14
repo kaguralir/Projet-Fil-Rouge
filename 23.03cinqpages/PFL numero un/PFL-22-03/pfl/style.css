@@ -161,26 +161,30 @@ nav ul li a {
 
   nav ul {
     max-height: 0px;
-    background: #000;
+    background: rgba(66, 152, 250, 0.5);
   }
 
   nav.black ul {
-    background: #000;
+    background: rgba(66, 152, 250, 0.5);
   }
 
+  /* effect when choosing menu */
   .showing {
-    max-height: 34em;
+    max-height: 54em;
+    background: rgba(66, 152, 250, 0.5);
   }
 
   nav ul li {
     box-sizing: border-box;
     width: 100%;
-    padding: 24px;
+    padding: 14px;
     text-align: center;
   }
 
   .menu-icon {
     display: block;
+    line-height: 70px;
+    background: rgba(66, 152, 250, 0.5);
   }
 }
 
@@ -1359,3 +1363,8 @@ p {
   font-weight: bold;
   color: #203c61;
 }
+
+/* #section2 {
+  margin-top: 200px;
+}
+ */
